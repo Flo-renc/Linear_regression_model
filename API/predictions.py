@@ -50,13 +50,22 @@ def predict_satisfaction(data: SessionData):
         data.TotalPrompts,
         data.AI_AssistanceLevel,
         data.UsedAgain,
-        data.StudentLevel_Intermediate,
-        data.StudentLevel_Senior,
+        data.StudentLevel_Undergraduate,
+        data.StudentLevel_High_Shcool,
+        data.Discipline_Business,
         data.Discipline_Engineering,
-        data.Discipline_Science,
+        data.Discipline_Computer_Science,
+        data.Discipline_History,
+        data.Discipline_Math,
+        data.Discipline_Psychology,
+        data.TaskType_Coding,
+        data.TaskType_Homework_Help,
         data.TaskType_Research,
-        data.TaskType_Study,
-        data.FinalOutcome_Success
+        data.TaskType_Studying,
+        data.TaskType_Writing,
+        data.FinalOutcome_Confused,
+        data.FinalOutcome_Idea_Drafted,
+        data.FinalOutcome_Gave_Up
     ]).reshape(1, -1)
 
     input_scaled = scaler.transform(input_array)
