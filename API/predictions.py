@@ -14,7 +14,7 @@ class SessionData(BaseModel):
     AI_AssistanceLevel: int = Field(..., ge=0, le=5)
     UsedAgain: int = Field(..., ge=0, le=1)
     StudentLevel_Undergraduate: int = Field(..., ge=0, le=1)
-    StudentLevel_High_Shcool: int = Field(..., ge=0, le=1)
+    StudentLevel_High_School: int = Field(..., ge=0, le=1)
     Discipline_Business: int = Field(..., ge=0, le=1)
     Discipline_Computer_Science: int = Field(..., ge=0, le=1)
     Discipline_Engineering: int = Field(..., ge=0, le=1)
@@ -71,4 +71,4 @@ def predict_satisfaction(data: SessionData):
     input_scaled = scaler.transform(input_array)
     prediction = model.predict(input_scaled)
 
-    return {"Predicted Satisfaction Rating": round(float(prediction[0]), 2)}
+    return {"Prediction": round(float(prediction[0]), 2)}
