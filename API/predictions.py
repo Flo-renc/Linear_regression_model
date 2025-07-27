@@ -71,4 +71,4 @@ def predict_satisfaction(data: SessionData):
     input_scaled = scaler.transform(input_array)
     prediction = model.predict(input_scaled)
 
-    return {"Prediction": round(float(prediction[0]), 2)}
+    return {"prediction": round(float(prediction[0]), 2)}
