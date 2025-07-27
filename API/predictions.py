@@ -51,7 +51,7 @@ def predict_satisfaction(data: SessionData):
         data.AI_AssistanceLevel,
         data.UsedAgain,
         data.StudentLevel_Undergraduate,
-        data.StudentLevel_High_Shcool,
+        data.StudentLevel_High_School,
         data.Discipline_Business,
         data.Discipline_Engineering,
         data.Discipline_Computer_Science,
