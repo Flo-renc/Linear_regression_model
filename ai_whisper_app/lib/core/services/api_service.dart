@@ -7,7 +7,7 @@ class ApiService {
 
   static Future<double> predict(Map<String, dynamic> input) async {
     final response = await http.post(
-      Uri.parse("$baseUrl/predict"), // Adjust if your path is different
+      Uri.parse("$baseUrl/predict"), 
       headers: {'Content-Type': 'application/json'},
       body: jsonEncode(input),
     );
